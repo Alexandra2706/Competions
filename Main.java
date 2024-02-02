@@ -50,8 +50,11 @@ public class Main {
             }
         }
         System.out.println("--------------------");
-        printCreatorList(winners, "ПОБЕДИТЕЛИ: ");
-
+        if (winners.isEmpty()) {
+            System.err.println("Победителей нет");
+        } else {
+            printCreatorList(winners, "ПОБЕДИТЕЛИ: ");
+        }
     }
 
     /**
